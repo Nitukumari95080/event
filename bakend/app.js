@@ -10,11 +10,12 @@ const app = express();
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URI],
+    origin:"http://localhost:5173",
     methods: ["POST","GET", "OPTIONS"],
     credentials: true,
   })
 );
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
